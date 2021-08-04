@@ -1,0 +1,55 @@
+GET http://localhost:8080/student/2?page=0
+###
+POST http://localhost:8080/student
+Content-Type: application/json
+
+{
+  "firstName": "Bahodir",
+  "lastName": "Bahodirov",
+  "city": "Navoiy",
+  "district": "Navoiy",
+  "street": "Mustaqillik",
+  "groupId": 5,
+  "subjectList": [1,2,6]
+}
+###
+GET http://localhost:8080/group
+###
+POST http://localhost:8080/group
+Content-Type: application/json
+
+{
+  "name": "40-17",
+  "facultyId": 7
+}
+###
+GET http://localhost:8080/faculty
+###
+POST http://localhost:8080/faculty
+Content-Type: application/json
+
+{
+  "name": "Konchilik",
+  "universityId": 2
+}
+###
+GET http://localhost:8080/university
+###
+POST http://localhost:8080/university
+Content-Type: application/json
+
+{
+  "name": "Texnika",
+  "city": "Tashkent",
+  "district": "Olmazor",
+  "street": "Universitet ko'chasi"
+}
+###
+GET http://localhost:8080/subject
+###
+POST http://localhost:8080/subject
+Content-Type: application/json
+
+{
+  "name":"chizmachilik"
+}
