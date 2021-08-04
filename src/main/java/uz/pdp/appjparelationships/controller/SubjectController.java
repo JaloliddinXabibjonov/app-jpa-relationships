@@ -31,7 +31,7 @@ public class SubjectController {
         List<Subject> subjectList = subjectRepository.findAll();
         return subjectList;
     }
-
+    //UPDATE
     @PutMapping("/{id}")
     public String editSubject(@PathVariable Integer id, @RequestBody Subject subject){
         Optional<Subject> optionalSubject=subjectRepository.findById(id);
@@ -42,6 +42,7 @@ public class SubjectController {
         subjectRepository.save(subject1);
         return "Subject added";
     }
+    //DELETE
     @DeleteMapping("/{id}")
     public String deleteSubject(@PathVariable Integer id){
         Optional<Subject> optionalSubject = subjectRepository.findById(id);
